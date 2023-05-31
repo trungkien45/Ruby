@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Gen specs: rails generate rspec:swagger ForestsController
+
+Gen yaml: rake rswag:specs:swaggerize
