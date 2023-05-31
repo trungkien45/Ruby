@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :trails
   resources :forests
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
   # Defines the root path route ("/")
   # root "articles#index"
+  get '/forests/show_one/:id', to: 'forests#show_one'
 end
