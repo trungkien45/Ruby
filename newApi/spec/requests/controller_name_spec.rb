@@ -4,9 +4,17 @@ RSpec.describe 'controller_name', type: :request do
 
   path '/controller_name/action1' do
 
-    get('action1 controller_name') do
+    post('action1 controller_name') do
       response(200, 'successful') do
-
+        consumes 'application/json'
+        parameter in: :body, schema: {
+          type: :object,
+          properties: {
+            name: { type: :string },
+            model: { type: :string }
+          },
+          required: %w[name model]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -27,10 +35,15 @@ RSpec.describe 'controller_name', type: :request do
         parameter name: :car, in: :body, schema: {
           type: :object,
           properties: {
-            name: { type: :string },
-            model: { type: :string }
-          },
-          required: %w[name model]
+            car: {
+              type: :object,
+              properties:{
+                name: { type: :string },
+                model: { type: :string }  
+              },
+              required: %w[name model]
+            }
+          }
         }
         after do |example|
           example.metadata[:response][:content] = {

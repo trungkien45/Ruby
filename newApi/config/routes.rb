@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'controller_name/action1'
+  post 'controller_name/action1'
   post 'controller_name/action2'
   resources :drafts
   get 'users/index'

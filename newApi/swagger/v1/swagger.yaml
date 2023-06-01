@@ -44,14 +44,8 @@ paths:
         '200':
           description: successful
   "/controller_name/action1":
-    get:
-      summary: action1 controller_name
-      responses:
-        '200':
-          description: successful
-  "/controller_name/action2":
     post:
-      summary: action2 controller_name
+      summary: action1 controller_name
       parameters: []
       responses:
         '200':
@@ -69,6 +63,29 @@ paths:
               required:
               - name
               - model
+  "/controller_name/action2":
+    post:
+      summary: action2 controller_name
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                car:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    model:
+                      type: string
+                  required:
+                  - name
+                  - model
   "/forests":
     get:
       summary: list forests
