@@ -43,14 +43,35 @@ paths:
       responses:
         '200':
           description: successful
-  "/forests":
+  "/controller_name/action1":
     get:
-      summary: list forests
+      summary: action1 controller_name
       responses:
         '200':
           description: successful
+  "/controller_name/action2":
     post:
-      summary: create forest
+      summary: action2 controller_name
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                model:
+                  type: string
+              required:
+              - name
+              - model
+  "/forests":
+    get:
+      summary: list forests
       responses:
         '200':
           description: successful
@@ -64,21 +85,6 @@ paths:
         type: string
     get:
       summary: show forest
-      responses:
-        '200':
-          description: successful
-    patch:
-      summary: update forest
-      responses:
-        '200':
-          description: successful
-    put:
-      summary: update forest
-      responses:
-        '200':
-          description: successful
-    delete:
-      summary: delete forest
       responses:
         '200':
           description: successful
