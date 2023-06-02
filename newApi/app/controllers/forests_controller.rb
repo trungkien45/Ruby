@@ -11,7 +11,6 @@ class ForestsController < ApplicationController
   end
 
   def show_one
-    forest = Forest.find(params[:id])
     render json: forest
   end
   

@@ -50,6 +50,13 @@ paths:
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              examples:
+                example_key:
+                  value:
+                    name: name
+                    model: model
       requestBody:
         content:
           application/json:
@@ -70,6 +77,13 @@ paths:
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              examples:
+                example_key:
+                  value:
+                    name: name
+                    model: model
       requestBody:
         content:
           application/json:

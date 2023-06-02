@@ -15,14 +15,11 @@ RSpec.describe 'controller_name', type: :request do
         required: %w[name model]
       }
         
-      response(200, 'successful') do
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
+      response(200, 'successful') do  
+        example 'application/json', :example_key, {
+          name:'name',
+          model: 'model'
+        }
         run_test!
       end
     end
@@ -46,13 +43,10 @@ RSpec.describe 'controller_name', type: :request do
         }
       }
       response(200, 'successful') do  
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
+        example 'application/json', :example_key, {
+          name:'name',
+          model: 'model'
+        }
         run_test!
       end
     end
