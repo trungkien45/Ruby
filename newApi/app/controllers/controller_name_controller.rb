@@ -1,6 +1,7 @@
 class ControllerNameController < ApplicationController
   def action1
     @car = Car.new(car_params)
+    @car.created_at = Time.now
     render json: @car
   end
 

@@ -17,8 +17,11 @@ RSpec.describe 'controller_name', type: :request do
         
       response(200, 'successful') do  
         example 'application/json', :example_key, {
+          id: 1,
           name:'name',
-          model: 'model'
+          model: 'model',
+          created_at: Time.now,
+          updated_at: Time.now
         }
         run_test!
       end
@@ -45,7 +48,9 @@ RSpec.describe 'controller_name', type: :request do
       response(200, 'successful') do  
         example 'application/json', :example_key, {
           name:'name',
-          model: 'model'
+          model: 'model',
+          created_at: Time.now,
+          updated_at: Time.now
         }
         run_test!
       end
