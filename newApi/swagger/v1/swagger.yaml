@@ -58,8 +58,8 @@ paths:
                     id: 1
                     name: name
                     model: model
-                    created_at: '2023-06-02 10:30:01 +0700'
-                    updated_at: '2023-06-02 10:30:01 +0700'
+                    created_at: '2023-06-02 12:35:43 +0700'
+                    updated_at: '2023-06-02 12:35:43 +0700'
       requestBody:
         content:
           application/json:
@@ -85,10 +85,11 @@ paths:
               examples:
                 example_key:
                   value:
+                    id: 1
                     name: name
                     model: model
-                    created_at: '2023-06-02 10:30:01 +0700'
-                    updated_at: '2023-06-02 10:30:01 +0700'
+                    created_at: '2023-06-02 12:35:43 +0700'
+                    updated_at: '2023-06-02 12:35:43 +0700'
       requestBody:
         content:
           application/json:
